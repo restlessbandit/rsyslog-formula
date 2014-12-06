@@ -126,5 +126,5 @@ daemon.*;mail.*;\
 
 {% if config.logbasepath|default(false) %}
 $template DailyPerHostLogs,"{{ config.logbasepath }}/%HOSTNAME%-%FROMHOST-IP%/%$YEAR%/%$MONTH%/%$DAY%.log"
-*.* -?DailyPerHostLogs
+local0.* -?DailyPerHostLogs
 {% endif %}
