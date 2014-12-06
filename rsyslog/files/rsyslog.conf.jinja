@@ -121,7 +121,7 @@ daemon.*;mail.*;\
         *.=notice;*.=warn       |/dev/xconsole
 
 {% if config.target|default(false) %}
-*.* @{{ config.target }}
+local0.* @{{ config.target }}
 {% endif %}
 
 {% if config.logbasepath|default(false) %}
